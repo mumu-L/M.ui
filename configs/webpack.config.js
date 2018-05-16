@@ -88,8 +88,8 @@ module.exports = {
 	},
 	resolve:{
 		alias:{
-			'vue':'vue/dist/vue.js',
-			'@':path.resolve(__dirname,'/../')
+			'vue$':'vue/dist/vue.js',
+			'@$':path.resolve(__dirname,'/../')
 		}
 	},
 	plugins: [

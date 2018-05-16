@@ -1,31 +1,30 @@
-$widthBase:15%;
-
-/*样式初始化*/
-html,body,div,ul,li{
+$menuWidth:15%;
+html,body,div,ul,li,ol{
 	margin: 0;
-	padding:0;
+	padding: 0;
 }
+
 ul,li{
-	list-style: none;
+	list-style: none
 }
-a{
-	text-align: center;
-	text-decoration: none;
-}
-/*body区*/
-.box{
+#m-ui{
 	display: flex;
-	flex-direction: row;
-}
-.layout-l{
-	width:$widthBase
-}
-.layout-r{
-	width:100%-$widthBase;
-	clear: both;
-	.breadcrumb{
-		margin-bottom: 0;
-		position: fixed;
+	justify-content: flex-start;
+	#m-ui-menu{
+		width:$menuWidth;
+	}
+	#m-ui-container{
+		width:100%-$menuWidth;
+		.m-ui-content{
+			margin-top:36px;
+		}
+		
+	}
+	#m-ui-breadcrumb{
+		position:fixed;
 		top:0;
+		right:0;
+		width:100%-$menuWidth;
+		height:36px;
 	}
 }

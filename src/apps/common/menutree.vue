@@ -1,49 +1,57 @@
 <template>
   <div id="menu">
   	<ul class="list-group">
-	  <li class="list-group-item">Cras justo odio</li>
-	  <li class="list-group-item">Dapibus ac facilisis in</li>
-	  <li class="list-group-item">Morbi leo risus</li>
-	  <li class="list-group-item">Porta ac consectetur ac</li>
-	  <li class="list-group-item">Vestibulum at eros</li>
-	  <li class="list-group-item">Cras justo odio</li>
-	  <li class="list-group-item">Dapibus ac facilisis in</li>
-	  <li class="list-group-item">Morbi leo risus</li>
-	  <li class="list-group-item">Porta ac consectetur ac</li>
-	  <li class="list-group-item">Vestibulum at eros</li>
-	  <li class="list-group-item">Cras justo odio</li>
-	  <li class="list-group-item">Dapibus ac facilisis in</li>
-	  <li class="list-group-item">Morbi leo risus</li>
-	  <li class="list-group-item">Porta ac consectetur ac</li>
-	  <li class="list-group-item">Vestibulum at eros</li>
+	  <router-link :to="item.path" v-for="item in menuArr">
+	  	<li class="list-group-item">
+	  		{{item.name}}
+	  	</li>
+	  </router-link>
    </ul>
   </div>
    
 </template>
 <style lang="scss">
 	#menu{
-		width:100%;
 		height:100%;
 		background-color:#363636;
-		clear: both;
 		ul{
-			position: fixed;
-			top:0;
-	        li{
-			   width:100%;
-			   border: none;
-			   background-color:#363636;
-			   color: #fff;
-			   &:hover{
-				  background-color: #000;
-	           }
-	        }
+			a{
+			   li{
+				   width:100%;
+				   height:35px;
+				   border: none;
+				   background-color:#363636;
+				   color: #fff;
+				   &:hover{
+					  background-color: #000;
+				   }
+	            }
+			}
+			a.router-link-exact-active{
+				li{
+				  background-color: black;	
+				}
+				
+			}
 		}
+		
         
 	}
 </style>
 <script>
+import { menuArr } from '../../router/index.es6'
 export default{
-
+   data(){
+	   return {
+		   menuArr:menuArr
+	   }
+   },
+	mounted(){
+	},
+	methods:{
+		clickMenu(e){
+			console.log(e)
+		}
+	}
 }
 </script>

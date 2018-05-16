@@ -1,15 +1,12 @@
-<div>
-  <div class="container-pull box">
-  		<div class="layout-l">
-		   <menu-tree></menu-tree>
- 		</div>
-  		<div class="layout-r">
-			<ol class="breadcrumb">
-			  <li><a href="#">Home</a></li>
-			  <li><a href="#">Library</a></li>
-			  <li class="active">Data</li>
-			</ol>
-			<div style="height:800px;">11</div>
-  		</div>
-  </div>
+<div class="comtainer-pull">
+   <menu-tree></menu-tree>
+   <div id="content">
+      <ol class="breadcrumb">
+		  <li><a href="#">Home</a></li>
+		  <li><a href="#">Library</a></li>
+		  <li class="active">Data</li>
+	  </ol>
+  	 
+   	 <router-view></router-view>
+   </div>
 </div>
