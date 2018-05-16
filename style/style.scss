@@ -1,0 +1,31 @@
+$widthBase:15%;
+
+/*样式初始化*/
+html,body,div,ul,li{
+	margin: 0;
+	padding:0;
+}
+ul,li{
+	list-style: none;
+}
+a{
+	text-align: center;
+	text-decoration: none;
+}
+/*body区*/
+.box{
+	display: flex;
+	flex-direction: row;
+}
+.layout-l{
+	width:$widthBase
+}
+.layout-r{
+	width:100%-$widthBase;
+	clear: both;
+	.breadcrumb{
+		margin-bottom: 0;
+		position: fixed;
+		top:0;
+	}
+}

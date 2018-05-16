@@ -1,0 +1,37 @@
+{
+  "name": "m-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server --dev --content-base ./ --config configs/webpack.config.js --hot --inline --port 8081",
+    "build": "webpack --config configs/webpack.config.js"
+  },
+  "author": "lilin",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.3.1",
+    "vue": "^2.5.16",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "css-loader": "^0.28.11",
+    "file-loader": "^1.1.11",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "less-loader": "^4.1.0",
+    "node-sass": "^4.9.0",
+    "sass": "^1.3.2",
+    "sass-loader": "^7.0.1",
+    "style-loader": "^0.21.0",
+    "url-loader": "^1.0.1",
+    "vue-loader": "^15.0.10",
+    "vue-template-compiler": "^2.5.16",
+    "webpack": "^4.8.1",
+    "webpack-cli": "^2.1.3",
+    "webpack-dev-server": "^3.1.4"
+  }
+}
