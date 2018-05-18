@@ -1,11 +1,14 @@
 <template>
   <div id="menu">
   	<ul class="list-group">
-	  <router-link :to="item.path" v-for="item in menuArr">
-	  	<li class="list-group-item">
-	  		{{item.name}}
-	  	</li>
-	  </router-link>
+ 	   <div v-for="item in menuArr">
+			<li class="list-group-item"  v-text="item.name"></li>
+	        <div v-for="ite in item.children">
+	        	<router-link :to="ite.path">
+			        <li class="list-group-item"  v-text="ite.name"></li>
+		       </router-link>
+	        </div>
+	  </div>
    </ul>
   </div>
    
@@ -47,6 +50,7 @@ export default{
 	   }
    },
 	mounted(){
+		console.log(this.menuArr)
 	},
 	methods:{
 		clickMenu(e){
