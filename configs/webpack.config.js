@@ -71,14 +71,14 @@ module.exports = {
 			test: /\.es6/,
 			loader: 'babel-loader'
          },{  
-            test:/\.(png)|(jpg)|(gif)|(woff)|(svg)|(eot)|(ttf)$/,  
+            test:/\.(png)|(jpg)|(gif)|(woff)|(svg)|(eot)|(ttf)|(otf)|(woff2)$/,  
             use: [  
                {  
                  loader: "url-loader",  
                   options: {  
                      limit:50000,   //小于50K的 都打包  
                      name:"[hash:8].[name].[ext]",  
-                     publicPath:"img/",  //替换CSS引用的图片路径 可以替换成爱拍云上的路径  
+                     publicPath:"/static/img/",  //替换CSS引用的图片路径 可以替换成爱拍云上的路径  
                      outputPath:"../static/img/"        //生成之后存放的路径  
                   }  
                }  
@@ -88,8 +88,9 @@ module.exports = {
 	},
 	resolve:{
 		alias:{
-			'vue$':'vue/dist/vue.js',
-			'@$':path.resolve(__dirname,'/../')
+			'vue':'vue/dist/vue.js',
+			'@':path.resolve(__dirname,'../'),
+			'$':'jquery'
 		}
 	},
 	plugins: [

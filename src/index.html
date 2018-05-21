@@ -2,9 +2,9 @@
    <menu-tree></menu-tree>
    <div id="content">
       <ol class="breadcrumb">
-		  <li><a href="#">Home</a></li>
-		  <li><a href="#">Library</a></li>
-		  <li class="active">Data</li>
+		  <li v-for="item in pathArr"><a href="#" v-text="item"></a></li>
+		  <!-- <li><a href="#">Library</a></li>
+		  <li class="active">Data</li> -->
 	  </ol>
   	 
    	 <router-view></router-view>

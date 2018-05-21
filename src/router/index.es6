@@ -31,6 +31,7 @@ let  addmenu=(data)=>{
 		    menus.push({
 			   path:level1.path,
 			   name:level1.name,
+			   expanded:false,
 			   children:(()=>{
 				   let arr=[]
 				   if(level1.children){
