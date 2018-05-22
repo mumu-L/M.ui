@@ -10,7 +10,7 @@
 		      <span v-text="item.name"></span>
 			</li> 
 	        <div v-for="ite in item.children" v-if="item.expanded">
-	        	<router-link :to="ite.path" >
+	        	<router-link :to="ite.path"  v-if="!ite.hidden">
 			        <li class="list-group-item"  v-text="ite.name" @click="links(ite.path)">
 					</li>
 		       </router-link>
@@ -67,6 +67,7 @@
 <script>
 import { menuArr } from '../../router/index.es6'
 export default{
+   name:"menusTree",
    data(){
 	   return {
 		   menuArr:menuArr,
@@ -77,6 +78,17 @@ export default{
 	  
    },
 	mounted(){
+		         this.$router.push('/menus/menu')
+			let  routerPath=this.$route.path,
+			     prtt=/\//,
+				 arr=routerPath.split(prtt),
+				 initArr=[]
+				 arr.forEach(element => {
+					 if(element!==''){
+						 initArr.push(element)
+					 }
+				 });
+				 this.menuPathArr=initArr
 	},
 	methods:{
 		render(){
@@ -84,8 +96,14 @@ export default{
 		},
 		links(link){
 			let  prtt=/\//,
-				 arr=link.split(prtt)
-				this.menuPathArr=arr
+				 arr=link.split(prtt),
+				  initArr=[]
+				 arr.forEach(element => {
+					 if(element!==''){
+						 initArr.push(element)
+					 }
+				 });
+				 this.menuPathArr=initArr
 		},
 		menuListStyle(item){
 			

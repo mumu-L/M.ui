@@ -4,18 +4,26 @@ html,body,div,ul,li,ol{
 	margin: 0;
 	padding: 0;
 }
-
+html,body{
+	height:100%;
+}
 ul,li{
 	list-style: none
+}
+a,a:hover,a:link,a:visited,a:active{
+	text-decoration: none;
 }
 #m-ui{
 	display: flex;
 	justify-content: flex-start;
+	height:100%;
 	#m-ui-menu{
 		width:$menuWidth;
+		height:100%;
 	}
 	#m-ui-container{
 		width:100%-$menuWidth;
+		height:100%;
 		.m-ui-content{
 			margin-top:36px;
 		}

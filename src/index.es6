@@ -6,6 +6,7 @@ import template from './apps/common/layout.html'
 import MenuTree from './apps/common/menutree.vue'
 import { router } from './router/index.es6'
 import $ from 'jquery'
+
 new Vue({
 	el:'#app',
 	template,
@@ -20,9 +21,10 @@ new Vue({
 		MenuTree
 	},
 	mounted(){
-		     let routepath=this.$route.path,
-			     prtt=/\//
-				 this.pathArr=routepath.split(prtt)
-//        this.$router.push('/bar')
+	   
+	//    let routepath=this.$route.path,
+	// 	   prtt=/\//
+	//    this.pathArr=routepath.split(prtt)
 	}
 })
+Vue.component('MenuTree')

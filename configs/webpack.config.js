@@ -90,7 +90,8 @@ module.exports = {
 		alias:{
 			'vue':'vue/dist/vue.js',
 			'@':path.resolve(__dirname,'../'),
-			'$':'jquery'
+			'$':'jquery',
+			"jQuery":'jquery'
 		}
 	},
 	plugins: [
