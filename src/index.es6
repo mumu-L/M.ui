@@ -13,6 +13,7 @@ new Vue({
 	router,
 	data(){
 		return {
+			
 		}
 	},
 	watch:{

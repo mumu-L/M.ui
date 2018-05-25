@@ -23,7 +23,7 @@
   </div>
    
 </template>
-<style lang="scss">
+<style lang="scss" scoped>
 	#menu{
 		height:100%;
 		background-color:#363636;
