@@ -1,8 +1,8 @@
 import VueRouter from 'vue-router'
 import Vue from 'vue'
-import Foo from '../apps/foo.vue'
 import Menu from '../apps/menus/menu.vue'
 import menuCode from '../apps/menus/code.vue'
+import addContent from '../apps/addContent/addcontent.vue'
 
 Vue.use(VueRouter)
 const routes = [
@@ -24,6 +24,10 @@ const routes = [
 				name:'代码',
 				component:menuCode,
 				hidden:true
+			},{
+				path:'addcontent',
+				name:'添加',
+				component:addContent
 			}]
 		  }
        ]
