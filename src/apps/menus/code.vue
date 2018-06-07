@@ -1,7 +1,7 @@
 <template>
 <div id="codes" class="container">
-   <pre class="mui-code">
-					<code > 
+   <pre class="mui-code" id="code">
+					<!-- <code > 
 &lt;ul class="list-group"&gt;</br>
 	&lt;div v-for="item in menuArr"&gt;</br>  
 		&lt;router-link :to="item.path" v-if="item.children.length==0"&gt;
@@ -17,7 +17,7 @@
 	    &lt;/div&gt;</br>  
 	&lt;/div&gt;</br>  
 &lt;/ul&gt;</br>
-					</code>
+					</code> -->
 				</pre>
 </div>
     
@@ -29,3 +29,20 @@
 	overflow-x:scroll;
  }
 </style>
+<script>
+import axios from 'axios'
+import $ from "jquery"
+export default {
+	data(){
+		return {
+			code:''
+		}
+	},
+	mounted(){
+		let _this=this
+		axios.get('/getaddcontent').then(params=>{
+			$("#code").append(params.data.content)
+		})
+	}
+}
+</script>

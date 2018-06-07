@@ -7,6 +7,7 @@ import MenuTree from './apps/common/menutree.vue'
 import { router } from './router/index.es6'
 import $ from 'jquery'
 
+
 new Vue({
 	el:'#app',
 	template,

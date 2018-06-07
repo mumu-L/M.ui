@@ -11,6 +11,7 @@
   "author": "lilin",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.18.0",
     "bootstrap": "^3.3.7",
     "jquery": "^3.3.1",
     "mavon-editor": "^2.6.4",
