@@ -1,6 +1,6 @@
 <template>
 <div id="codes" class="container">
-   <pre class="mui-code" id="code">
+   <!-- <pre class="mui-code" id="code"> -->
 					<!-- <code > 
 &lt;ul class="list-group"&gt;</br>
 	&lt;div v-for="item in menuArr"&gt;</br>  
@@ -18,7 +18,7 @@
 	&lt;/div&gt;</br>  
 &lt;/ul&gt;</br>
 					</code> -->
-				</pre>
+				<!-- </pre> -->
 </div>
     
 </template>
@@ -30,18 +30,24 @@
  }
 </style>
 <script>
-import axios from 'axios'
+
 import $ from "jquery"
+import axios from 'axios'
+import 'mavon-editor/dist/css/index.css'
 export default {
 	data(){
 		return {
+			
 			code:''
 		}
 	},
-	mounted(){
-		let _this=this
-		axios.get('/getaddcontent').then(params=>{
-			$("#code").append(params.data.content)
+	created(){
+		let id=this.$route.params.id,
+			url='/getcode/'+id,
+			_this=this
+
+		axios.get(url).then(result=>{
+			$("#codes").append(result.data.content)
 		})
 	}
 }

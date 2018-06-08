@@ -20,7 +20,7 @@ const routes = [
 				name:'左侧菜单',
 				component:Menu
 			},{
-				path:'code',
+				path:'code/:id',
 				name:'代码',
 				component:menuCode,
 				hidden:true

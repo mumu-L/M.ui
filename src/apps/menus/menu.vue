@@ -1,7 +1,7 @@
 <template>
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-4 content">
+			<div class="col-lg-4 content" v-for="list in contentObj">
 				<div id="menu">
 					<ul class="list-group">
 					<div v-for="item in menuArr">
@@ -21,8 +21,8 @@
 					</div>
 				</ul>
             </div>	
-				<h4>黑色简约风格左侧菜单</h4>
-				<router-link to="/menus/code">
+				<h4>{{list.name}}</h4>
+				<router-link :to="'/menus/code/'+list.id">
                     <button>查看代码</button>
 				</router-link>
 				
@@ -46,6 +46,7 @@
 </template>
 <script>
    import $ from 'jquery'
+   import axios from 'axios'
    
    export default{
 	   data(){
@@ -73,10 +74,15 @@
 						  }
 						]
 				  }
-			   ]
+			   ],
+			   contentObj:[]
 		   }
 	   },
 	  mounted(){
+		  let _this=this
+			axios.get('/getaddcontent').then(params=>{
+				_this.contentObj=params.data
+			})
 	  },
 	  methods:{
 			menuListStyle(item){
