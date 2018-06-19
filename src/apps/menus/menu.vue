@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-4 content" v-for="list in contentObj">
-				<div id="menu">
+				<!--<div id="menu">
 					<ul class="list-group">
 					<div v-for="item in menuArr">
 							<router-link :to="item.path" v-if="item.children.length==0" >
@@ -20,7 +20,7 @@
 							</div>
 					</div>
 				</ul>
-            </div>	
+            </div>	-->
 				<h4>{{list.name}}</h4>
 				<router-link :to="'/menus/code/'+list.id">
                     <button>查看代码</button>
