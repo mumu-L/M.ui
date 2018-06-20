@@ -25,6 +25,10 @@
 				<router-link :to="'/menus/code/'+list.id">
                     <button>查看代码</button>
 				</router-link>
+				<router-link :to="'/menus/demo/'+list.id">
+                    <button>查看示例</button>
+				</router-link>
+				<button @click="deleteDemo(list.id)" >删除</button>	
 				
 			</div>
 			<div class="col-lg-4">
@@ -61,13 +65,11 @@
 							path:'child1',
 							name:'子目录1',
 							expanded:false
-						  },
-						  {
+						  },{
 							path:'child2',
 							name:'子目录2',
 							expanded:false
-						  },
-						  {
+						  },{
 							path:'child3',
 							name:'子目录3',
 							expanded:false
@@ -95,6 +97,10 @@
 		},
 			toggle(item){
 				item.expanded=!item.expanded
+			},
+			deleteDemo(id){
+				let _this=this
+				axios.post('/deletedemo/'+id)
 			}
 	  }
 

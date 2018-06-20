@@ -3,6 +3,7 @@ import Vue from 'vue'
 import Menu from '../apps/menus/menu.vue'
 import menuCode from '../apps/menus/code.vue'
 import addContent from '../apps/addContent/addcontent.vue'
+import Demo from '../apps/common/demo.vue'
 
 Vue.use(VueRouter)
 const routes = [
@@ -23,6 +24,11 @@ const routes = [
 				path:'code/:id',
 				name:'代码',
 				component:menuCode,
+				hidden:true
+			},{
+				path:'demo/:id',
+				name:'示例',
+				component:Demo,
 				hidden:true
 			},{
 				path:'addcontent',

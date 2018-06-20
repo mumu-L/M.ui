@@ -18,12 +18,16 @@ a,a:hover,a:link,a:visited,a:active{
 	justify-content: flex-start;
 	height:100%;
 	#m-ui-menu{
+		position: fixed;
+		z-index: 10000;
+		top:0;
+		bottom: 0;
 		width:$menuWidth;
-		height:100%;
+		
 	}
 	#m-ui-container{
+		margin-left: $menuWidth;
 		width:100%-$menuWidth;
-		height:100%;
 		.m-ui-content{
 			margin-top:36px;
 		}

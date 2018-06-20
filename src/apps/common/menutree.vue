@@ -17,9 +17,9 @@
 	        </div>
 	  </div>
    </ul>
-    <ol class="breadcrumb" id="m-ui-breadcrumb">
-	  <li v-for="i in menuPathArr"><a href="#" v-text="i"></a></li>
-   </ol>
+   <ol class="breadcrumb" id="m-ui-breadcrumb">
+        <li v-for="i in menuPathArr"><a href="#" v-text="i"></a></li>
+    </ol>
   </div>
    
 </template>
